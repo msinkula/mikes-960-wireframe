@@ -1,0 +1,30 @@
+
+.staff-member-listing {
+	overflow: auto;
+	}
+
+.staff-member {
+	float: left;
+	max-width: 138px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	}
+
+.staff-member-photo {
+	float: right;
+	max-width: 298px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	border: 1px solid black;
+	}
+
+.staff-icon-social {
+	max-width: 32px;
+	margin-right: 10px;
+	}
+
+#content a img.staff-icon-social {
+	border: none;
+	padding: 0;
+	background: none;
+	}
