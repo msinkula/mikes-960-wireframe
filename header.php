@@ -88,11 +88,11 @@
         </div>
         <!-- End Search Form -->
         
-        <!-- Begin Tickets Link -->
-        <div id="tickets">
-        <a href="https://wingitproductions.secure.force.com/ticket"><button>Buy Tickets&nbsp;&raquo;</button></a>
+        <!-- Begin Download Notice -->
+        <div id="notice">
+        <p><a href="https://github.com/msinkula/mikes-960-wireframe/archive/master.zip">Download this theme!</a></p>
         </div>
-        <!-- End Tickets Link -->
+        <!-- End Download Notice -->
     
     </div>
     <!-- End Tchotchkes -->
@@ -109,5 +109,6 @@
 <div id="middle">
 
 <!-- Begin Breadcrumbs -->
-<div id="breadcrumbs"><?php if ( !is_page('Home') ) { bcn_display(); } ?></div>
+<div id="breadcrumbs">
+<?php if ( !is_page('Home') ) { if (function_exists('bcn_display')) { bcn_display(); } } ?></div>
 <!-- End Breadcrumbs -->

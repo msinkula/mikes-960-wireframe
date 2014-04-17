@@ -210,16 +210,7 @@ h1, h2, h3, h4 {
 		overflow: hidden;
 		}
 		
-	#content.page-16, #content.page-8 {
-		float: none;
-		width: auto;
-	}
 	
-	#content.page-16 iframe {
-		overflow:auto;
-		width: 100%;
-		padding: 0;
-	}
 	
 	#content div.buy-tickets-button {
 		position: relative;
@@ -229,12 +220,6 @@ h1, h2, h3, h4 {
 		overflow: hidden;
 	}
 	
-	#content button.buy-tickets {
-		float: right;
-		margin-right: 20px;		
-		font-family: "FeltTipRomanRegular",  "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-		font-size: 36px;
-	}
 	
 	#content div.header {
 		display: none;
