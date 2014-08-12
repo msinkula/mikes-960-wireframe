@@ -5,17 +5,7 @@
 <?php if (have_posts()) : ?>
 <?php while (have_posts()) : the_post(); ?>
 	<article class="page" id="post-<?php the_ID(); ?>">
-    <?php add_flexslider(); ?>
-	<?php /*get_buy_tickets_button();*/ 
-	
-	$key = "buy-tickets-button";
-	$value = get_post_meta($post->ID, $key, true);
-
-	if (!empty($value)) {
-	
-	echo '<div class="buy-tickets-button"><a href="'.$value.'"><button class="buy-tickets">Buy Tickets&nbsp;&raquo;</button></a></div>';
-
-	}  ?>
+    <?php /*add_flexslider();*/ ?>
     <h1><?php the_title(); ?></h1>
     <?php the_content(); ?>
 	</article>

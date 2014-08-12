@@ -2,11 +2,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title><?php if ( is_home() || is_page() || is_archive()  ) { ?> <?php bloginfo('description'); echo ' | '; ?><?php } ?><?php if ( is_single() ) { ?> <?php wp_title('|',true,'right'); ?><?php } ?><?php bloginfo('name'); ?> | Seattle, WA</title>
+<title><?php if (is_front_page() || is_home() || is_archive()) { bloginfo('description'); } elseif ( is_single() || is_page()) { the_title(); }
+	
+	if ( is_page() && $post->post_parent ) {
+		 $parent_title = get_the_title($post->post_parent); 
+		 echo ' | ';
+		 echo $parent_title;  
+		 } 
+			?> 
+            
+            | 
+		 
+		 <?php bloginfo('name'); ?> | Seattle, WA.</title>
 
 <!-- Begin Meta -->
 <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
-<meta name="description" content="<?php if ( is_home() || is_category() || is_archive() || is_page() ) { ?><?php bloginfo('description'); ?><?php } ?><?php if ( is_single() ) { echo strip_tags(get_the_excerpt($post->ID)); } ?>" />
+<meta name="description" content="<?php if ( is_home() || is_category() || is_archive() ) { ?><?php bloginfo('description'); ?><?php } ?><?php if ( is_single() || is_page() ) { echo strip_tags(get_the_excerpt($post->ID)); } ?>" />
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
 <!-- End Meta -->
 
@@ -69,23 +80,6 @@
     
     <!-- Begin Tchotchkes -->
     <div id="tchotchkes">
-    
-        <!-- Begin Social Icons -->
-        <div id="social-icons">
-        <a href="https://www.facebook.com/jetcityimprov" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/img-facebook.png" alt="Jet City Improv's FaceBook Page"></a>
-        <a href="https://twitter.com/JetCityImprov" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/img-twitter.png" alt="Jet City Improv's Twitter Feed"></a>
-        <a href="http://www.youtube.com/user/JetCityImprov" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/img-youtube.png" alt="Jet City Improv's YouTube Page"></a>
-        </div>
-        <!-- End Social Icons -->
-        
-        <!-- Begin Search Form -->
-        <div id="search">
-        <form method="get" class="searchform" action="<?php bloginfo('home'); ?>/">
-        <input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" class="textfield" />
-        <input type="submit" name="submit" class="submit" value="Search" />
-        </form>
-        </div>
-        <!-- End Search Form -->
         
         <!-- Begin Download Notice -->
         <div id="notice">

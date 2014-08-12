@@ -2,7 +2,7 @@
 <div id="sidebar" class="page-<?php the_ID(); ?>">
 
 	<!-- Begin Sub Pages -->
-	<?php if ( !is_404() ) { if ( !is_search() ) { 
+	<?php  
 	
         if ($post->post_parent) { // if has post parent 
 			
@@ -10,18 +10,18 @@
 			$parent_link = get_permalink($post->post_parent); 
 			$parent_title = get_the_title($post->post_parent);
 		
-		} // end if has post parent 
+			if ($children) { // if children ?>
+			
+				<h2 class="sub-menu-title"><a href="<?php echo $parent_link; ?>"><?php  echo $parent_title; ?></a>:</h2>
+				<ul class="sub-menu">
+				<?php echo $children; ?>
+				</ul>
+				
+			<?php } // end if children
 		
-        if ($children) { // if children ?>
-        
-        	<h2 class="sub-menu-title"><a href="<?php echo $parent_link; ?>"><?php  echo $parent_title; ?></a>:</h2>
-        	<ul class="sub-menu">
-        	<?php echo $children; ?>
-        	</ul>
-            
-		<?php } // end if children ?>   
+		} // end if has post parent    
  
-    <?php } } ?>	
+    ?>	
     <!-- End Sub Pages -->
     
     <!-- Begin Blog Categories -->
@@ -44,11 +44,6 @@
     <?php endif; ?>
     <!-- End Dynamic Sidebar -->
     
-    <!-- Begin Donate Link -->
-    <div id="donate">
-    <a href="../donate/"><button>Donate&nbsp;&raquo;</button></a>
-    </div>
-    <!-- End Tickets Link -->
     
 </div>
 <!-- End Sidebar -->

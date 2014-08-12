@@ -26,10 +26,6 @@ Template Name: Home Page
     </article>
 <?php endwhile; ?>
 <?php endif; ?>
-<nav class="post-navigation">
-    <span class="post-navigation-previous"><?php previous_posts_link('&laquo; Newer Postings'); ?></span>
-    <span class="post-navigation-next"><?php next_posts_link('Older Postings &raquo;'); ?></span>
-</nav>
 </div>
 <!-- End Content -->
 
