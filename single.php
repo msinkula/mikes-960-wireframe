@@ -7,7 +7,7 @@
 <article class="post" id="post-<?php the_ID(); ?>">
     <h1><?php the_title(); ?></h1>
     <p class="postdata">Posted <?php the_time('M j, Y') ?> in <?php the_category(', ') ?></p>    
-    <?php /*add_flexslider();*/ ?>
+    <?php the_post_thumbnail('large'); // get the featured image ?>
     <?php the_content(''); ?> 
     <nav class="post-navigation">
         <span class="post-navigation-previous"><?php previous_post(' &laquo; %','', 'yes'); ?></span>

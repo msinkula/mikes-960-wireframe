@@ -27,16 +27,13 @@
     <!-- Begin Blog Categories -->
     <?php 
 	
-	if (!('staff-member' == get_post_type())) { // if is not the staff memeber custom post type
-		
-		if ( is_home() || is_single() || is_archive() ) { ?> 
-		<h2 class="sub-menu-title">Blog:</h2>
-		<ul class="sub-menu">
-		<?php wp_list_categories('exclude=&title_li='); ?>
-		</ul>
-    	<?php } 
-	
-	} ?>
+	if ( is_home() || is_single() || is_archive() ) { ?> 
+        <h2 class="sub-menu-title">Blog:</h2>
+        <ul class="sub-menu">
+        <?php wp_list_categories('exclude=&title_li='); ?>
+        </ul>
+        
+	<?php } ?>
     <!-- End Blog Categories -->
     
     <!-- Begin Dynamic Sidebar -->

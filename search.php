@@ -4,7 +4,6 @@
 <div id="content">
 <h1>Search Results:</h1>
 <?php if (have_posts()) : ?>
-    
     <p>Here's what we found for you...</p>
     <?php while (have_posts()) : the_post(); ?>
     <article class="page-excerpt" id="page-excerpt-<?php the_ID(); ?>">
@@ -16,9 +15,9 @@
 <?php else : ?>
     <p>No posts found. Try a different search?</p>
     <form method="get" class="searchform" action="<?php bloginfo('home'); ?>/">
-        <input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" class="textfield" />
-        <input type="submit" name="submit" class="submit" value="Search" />
-        </form>
+    <input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" class="textfield" />
+    <input type="submit" name="submit" class="submit" value="Search" />
+    </form>
 <?php endif; ?> 
 </div>
 <!-- END CONTENT -->

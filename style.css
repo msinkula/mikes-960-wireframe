@@ -9,9 +9,7 @@ Author URI: http://www.premiumdw.com/
 /* 	
 COLOR PALETTE:
 
-Yellow: http://slayeroffice.com/tools/color_palette/?hex=fff203
 Red: http://slayeroffice.com/tools/color_palette/?hex=e00000
-Grey: http://slayeroffice.com/tools/color_palette/?hex=A8A8A8
 Black: http://slayeroffice.com/tools/color_palette/?hex=000000
 
 */
@@ -446,13 +444,25 @@ h1, h2, h3, h4 {
 		}
 		
 		#content article.page-excerpt img {
-			margin-top: 14px;
+			margin-top: 6px;
 		}
 
 	.size-thumbnail, .wp-post-image {
 		padding: 4px;
 		background-color:#FFF;
 		}
+		
+	.attachment-large {
+		height: auto;
+		padding: 4px;
+		background-color:#FFF;
+		border: 2px solid black;
+	}
+	
+	.attachment-thumbnail {
+		float: left;
+		margin-right: 20px;
+	}
 		
 	#facebook-like-button {
 		margin-top: 25px;
