@@ -12,12 +12,7 @@ register_sidebars(array(
 
 // Register Menus
 function register_my_menus() {
-  register_nav_menus(
-    array(
-      'main-menu' => __( 'Main Menu' ),
-      'footer-menu' => __( 'Footer Menu' )
-    )
-  );
+  register_nav_menus(array('main-menu' => __( 'Main Menu' ), 'footer-menu' => __( 'Footer Menu')));
 }
 add_action( 'init', 'register_my_menus' );
 	
@@ -40,17 +35,9 @@ function show_avatar($comment, $size) {
 // Create Page Excerpts
 add_post_type_support( 'page', 'excerpt' );
 
-// Create a "Read More" link for excerpts	
-function new_excerpt_more($more) {
-	global $post;
-	return '<a href="'. get_permalink($post->ID) . '">Read the Rest...</a>';
-}
-
 // create thumbnails for excerpts using the featured image
 if ( function_exists( 'add_theme_support' ) ) { 
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 130, 130, true );
-	}
+	add_theme_support( 'post-thumbnails' );	}
 	
 // display attachment images as a flexslider gallery
 function add_flexslider() { 

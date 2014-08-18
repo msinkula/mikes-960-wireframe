@@ -98,7 +98,7 @@ h1, h2, h3, h4 {
 			
 		
 		#tickets button {
-			font-family: "FeltTipRomanRegular",  "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+			font-family: "FeltTipRomanRegular", sans-serif;
 			font-size: 2.25em;
 		}
 
@@ -123,7 +123,7 @@ h1, h2, h3, h4 {
 	}
 	
 	#menu-main-menu > li {
-		font-family: "FeltTipRomanRegular", Arial, Helvetica, sans-serif;
+		font-family: "FeltTipRomanRegular", sans-serif;
 		font-size: 1.5em;
 		float: left;
 		list-style-type: none;
@@ -318,16 +318,14 @@ h1, h2, h3, h4 {
 
 	#content iframe, #content object {
 		background-color: #FFFFFF;
-		border: 1px solid #666;
-		padding: 1.5%;
+		-moz-box-sizing: border-box; /* changes the box model for firefox */
+		-webkit-box-sizing: border-box; /* changes the box model for chrome & safari */
+		box-sizing: border-box; /* changes the box model for general browsers */
+		border: 1px solid #000;
+		padding: 4px;
 		overflow: hidden;
-		width: 95%;
+		max-width: 100%;
 		}
-		
-	#content img.attachment-130x130 {
-		float: left;
-		margin-right: 20px;
-	}
 		
 	#content img.avatar {
 		border: 1px solid #666;
@@ -336,19 +334,36 @@ h1, h2, h3, h4 {
 		}
 	
 	#content img {
-			/*border: 1px solid #666;*/
 			background-color: #FFF;
 			}
+			
+	#content img.attachment-large {
+		height: auto;
+		padding: 4px;
+		background-color:#FFF;
+		-moz-box-sizing: border-box; /* changes the box model for firefox */
+		-webkit-box-sizing: border-box; /* changes the box model for chrome & safari */
+		box-sizing: border-box; /* changes the box model for general browsers */
+		border: 1px solid black;
+	}
 	
-	#content a img {
-			border: 1px solid #666;
-			background-color: #FFF;
-			}
+	#content a img.attachment-thumbnail {
+		float: left;
+		max-width: 140px;
+		max-height: 140px;
+		margin-right: 20px;
+		padding: 4px;
+		-moz-box-sizing: border-box; /* changes the box model for firefox */
+		-webkit-box-sizing: border-box; /* changes the box model for chrome & safari */
+		box-sizing: border-box; /* changes the box model for general browsers */
+		border: 1px solid #000;
+		background-color: #FFF;
+	}
 		
-		#content a:hover img {
-			border: 1px solid #666;
-			background-color: #666;
-			}
+	#content a:hover img.attachment-thumbnail {
+		border: 1px solid #000;
+		background-color: #000;
+		}
 		
 	#content img.aligncenter {
 		margin-left: auto;
@@ -419,11 +434,6 @@ h1, h2, h3, h4 {
 		overflow:auto;
 		}
 		
-	#content article.post-box img {
-		float: left;
-		margin-right: 20px;
-		}
-		
 	#content article.post-box p, #content article.page-excerpt p {
 		display: inline;
 		}
@@ -446,27 +456,8 @@ h1, h2, h3, h4 {
 		#content article.page-excerpt img {
 			margin-top: 6px;
 		}
-
-	.size-thumbnail, .wp-post-image {
-		padding: 4px;
-		background-color:#FFF;
-		}
 		
-	.attachment-large {
-		height: auto;
-		padding: 4px;
-		background-color:#FFF;
-		border: 2px solid black;
-	}
 	
-	.attachment-thumbnail {
-		float: left;
-		margin-right: 20px;
-	}
-		
-	#facebook-like-button {
-		margin-top: 25px;
-		}
 	
 	.post-comments {
 		float: right;
@@ -474,41 +465,11 @@ h1, h2, h3, h4 {
 		height: 60px;
 		padding:18px 0 0 24px;
 		font-size:18px;
-		font-family: "FeltTipRomanRegular",  "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+		font-family: "FeltTipRomanRegular", sans-serif;
 		font-weight:normal;
 		margin: 10px 0px -10px 20px;
 		background: url(images/commentbck.png) no-repeat;
 		display: none;
-		}
-		
-	
-	.post-comments a:link, .post-comments a:visited, .post-comments a:active{
-		color: #666; /* brown */
-		text-decoration:none;
-		}
-	
-	.post-comments a:hover {
-		color:#666;
-		text-decoration:none;
-		}
-	
-	.time-meta {
-		display: block;
-		font-size: 12px;
-		}
-		
-	.from-meta {
-		display:none;
-		}
-		
-	.commentlist {
-		padding: 0;
-		margin-bottom: 20px;
-		}	
-	
-	.commentlist p {
-		margin: 0 15px 10px 2px;
-		clear:both;
 		}
 		
 	#commentform p {
@@ -521,20 +482,6 @@ h1, h2, h3, h4 {
 		padding: 0;
 		}
 		
-	.alt {
-		padding: 10px;
-		}	
-		
-	.alt2{
-		padding: 10px;
-		}	
-		
-	.administrator {
-		margin-top: 1px;
-		padding: 10px 10px 5px 10px;
-		background: #666 url(images/author.png) no-repeat center ;
-		border: 1px solid #666; /* brown */
-		}
 		
 	.cgravatar {
 		float: left;
@@ -626,14 +573,11 @@ h1, h2, h3, h4 {
 	
 	#sidebar button {
 			width: 100%;
-			font-family:"FeltTipRomanRegular";
+			font-family: "FeltTipRomanRegular", sans-serif;
 			font-size: 2.25em;
 		}
 	
-	#sidebar ul.sub-menu {
-		padding-left: 10px;
-		margin-bottom: 10px;	
-		}
+	
 		
 	#sidebar h2 {
 		font-weight:normal;
@@ -644,10 +588,14 @@ h1, h2, h3, h4 {
 		#sidebar h2 a:hover {
 			color: #666;
 			}
-		
-	#sidebar li {
-		list-style-position: inside;
+	
+	#sidebar li ul li, #sidebar ul.sub-menu li {
+		margin-left: 20px;
 	}
+	
+	#sidebar ul.sub-menu {
+		margin-bottom: 10px;	
+		}
 	
 	
 	#sidebar li a {
@@ -679,23 +627,19 @@ h1, h2, h3, h4 {
 		margin-bottom:4px;
 		}
 		
-	.widget ul {
+	#sidebar li.widget ul {
 		margin-bottom: 10px;
-		border:none ;
-		list-style:none;
-		}
-	
-	.widget ul li {
-		padding: 10px 0;
 		}
 		
-	.widget ul li:last-child {
+	#sidebar li.widget ul li:last-child {
 		background: none;
 		}
 		
-		/*.widget ul li a, .widget dl dd a {
-			color: red;
-			}*/
+	#sidebar span.post-date {
+		display: block;
+		font-size: .875em;
+		font-style: italic;
+	}
 			
 /* FOOTER MENU */
 #menu-footer {
@@ -711,7 +655,7 @@ h1, h2, h3, h4 {
 	}
 	
 	#menu-footer-menu > li {
-		font-family: "FeltTipRomanRegular", Arial, Helvetica, sans-serif;
+		font-family: "FeltTipRomanRegular", sans-serif;
 		font-size: 1.5em;
 		width: 140px;
 		float: left;
@@ -758,7 +702,7 @@ h1, h2, h3, h4 {
 	}
 
 #footer p {
-	font-family: "FeltTipRomanRegular",  "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	font-family: "FeltTipRomanRegular", sans-serif;
 	text-align:left;
 	}
 	
@@ -958,7 +902,7 @@ h1, h2, h3, h4 {
 	#print-header h1 {
 		display: block;
 		font-size: 36px;
-		font-family: "FeltTipRomanRegular",  "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+		font-family: "FeltTipRomanRegular", sans-serif;
 		font-weight:normal;
 		margin-bottom: 20px;
 	}
