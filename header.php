@@ -56,7 +56,7 @@
 
 </head>
 
-<body class="<?php if (is_page('Home')) { echo 'home'; } elseif (is_page()) { echo 'pages'; } elseif ( is_home() || is_single() || is_archive()) { echo 'postings';} ?>">
+<body <?php body_class(); ?>>
 
 <!-- Begin Header -->
 <div id="header">
@@ -72,7 +72,7 @@
         
         <!-- Begin Download Notice -->
         <div id="notice">
-        <p><a href="https://github.com/msinkula/mikes-960-wireframe/archive/master.zip">Download this theme!</a></p>
+        <p><a href="https://github.com/msinkula/mikes-960-wireframe/" target="_blank">GitHub</a></p>
         </div>
         <!-- End Download Notice -->
     
