@@ -36,7 +36,7 @@ body {
 	font-size: 100%; /* 16px */
 	line-height: 150%; /* 24px */
 	color: #000; /* black */
-	background: url(images/bg-12col.png) center repeat-y;
+	background: url('images/bg-12col.png') center repeat-y;
 	
 	}
 	
