@@ -70,7 +70,7 @@
     <!-- Begin Tchotchkes -->
     <div id="tchotchkes">
         
-        <!-- Begin Download Notice -->
+        <!-- Begin Download Notice 
         <div id="notice">
         <p><a href="https://github.com/msinkula/mikes-960-wireframe/" target="_blank">GitHub</a></p>
         </div>
