@@ -8,8 +8,15 @@ Author URI: http://www.premiumdw.com/
 
 /* Testing SSH to server */
 /* Testing git pull origin master */
+<<<<<<< Updated upstream
 /* Write your most classroom appropriate but offensive comment. */
+<<<<<<< HEAD
 /* boobs and butt stuff */
+=======
+=======
+/* ignorewhatmikesays.com */
+>>>>>>> Stashed changes
+>>>>>>> origin/master
 
 /* 	
 COLOR PALETTE:
@@ -68,7 +75,7 @@ h1, h2, h3, h4 {
 	padding: 20px;
 	overflow: hidden;
 	border: 1px solid magenta; /* I should have made a comment here */
-	}
+	} 
 
 	#logo {
 		float:left;
