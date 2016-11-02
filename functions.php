@@ -16,23 +16,25 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
-
+add_post_type_support( 'new_production', 'excerpt' );
 // Custom Post type
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
-  register_post_type( 'new_production',
-    array(
-      'labels' => array(
+    register_post_type( 'new_production',
+        array(
+        'labels' => array(
         'name' => __( 'Productions' ),
         'singular_name' => __( 'Production' )
-      ),
-      'public' => true,
-      'has_archive' => true,
+        ),
+        'public' => true,
+        'has_archive' => true,
         'rewrite' => array('slug' => 'productions'),
-    )
-  );
+        )
+    );
 }
-
+add_post_type_support( 'new_production', 'excerpt' );
+add_post_type_support( 'new_production', 'thumbnail' );
+//
 	
 // Show Gravatar in Comments	
 function show_avatar($comment, $size) {				
