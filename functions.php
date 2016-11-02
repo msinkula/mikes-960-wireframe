@@ -16,7 +16,6 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
-add_post_type_support( 'new_production', 'excerpt' );
 // Custom Post type
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
