@@ -445,7 +445,7 @@ h1, h2, h3, h4 {
 		}
 		
 	#content article.post-box p, #content article.page-excerpt p {
-		display: inline;
+		/* display: inline; */
 		}
 
 		#content article.post-box p.postdata {
@@ -456,6 +456,7 @@ h1, h2, h3, h4 {
 			font-style:italic;
 			font-size: .875em;
 			white-space: nowrap;
+            display: inline;
 		}
 
 	#content article.page-excerpt {

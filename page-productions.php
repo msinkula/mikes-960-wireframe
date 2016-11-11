@@ -32,8 +32,8 @@
             // Gets the even location
             $location = get_post_meta( $post->ID, '_event_location', true );
             ?>
-            <p><strong>Date:</strong> <?php echo $start_month . ' ' . $start_day . ' ' . $start_year; ?> to <?php echo $end_month . ' ' . $end_day . ' ' . $end_year; ?> </p>
-            <p><strong>Location:</strong><?php echo  $location;?></p>
+            <p><strong>Date:</strong>&nbsp;<?php echo $start_month . '/' . $start_day . '/' . $start_year; ?> to <?php echo $end_month . '/' . $end_day . '/' . $end_year; ?><br>
+            <strong>Location:</strong>&nbsp;<?php echo $location;?></p>
             
             
             <a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
