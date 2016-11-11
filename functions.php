@@ -48,7 +48,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 // display attachment images as a flexslider gallery
 function add_flexslider() { 
 	
-	$attachments = get_children(array('post_parent' => get_the_ID(), 'order' => 'ASC', 'orderby' => 'menu_order', 'post_type' => 'attachment', 'post_mime_type' => 'image','caption' => $attachment->post_excerpt, 'description' => $attachment->post_content, ));
+	$attachments = get_children(array('post_parent' => get_the_ID(), 'order' => 'ASC', 'orderby' => 'menu_order', 'post_type' => 'attachment', 'post_mime_type' => 'image', ));
 	
 	if ($attachments) { // see if there are images attached to posting ?>
         
@@ -58,9 +58,9 @@ function add_flexslider() {
     
     <?php // create the list items for images with captions
     
-    foreach ( $attachments as $attachment_id => $attachment ) { 
+    foreach ( $attachments as $attachment ) { 
 	
-		$theImage = wp_get_attachment_image($attachment_id, 'full');
+		$theImage = wp_get_attachment_image($attachment->ID, 'full');
 		$theBlockquote = get_post_field('post_excerpt', $attachment->ID);
 		$theLink = get_post_field('post_content', $attachment->ID);
 	
