@@ -15,16 +15,12 @@
             <?php 
             // Gets the event start month from the meta field
             $start_month = get_post_meta( $post->ID, '_start_month', true );
-            // Converts the month number to the month name
-            //$start_month = $wp_locale->get_month_abbrev( $wp_locale->get_month( $start_month ) );
             // Gets the event start day
             $start_day = get_post_meta( $post->ID, '_start_day', true );
             // Gets the event start year
             $start_year = get_post_meta( $post->ID, '_start_year', true );
             // Gets the event end month from the meta field
             $end_month = get_post_meta( $post->ID, '_end_month', true );
-            // Converts the month number to the month name
-            //$end_month = $wp_locale->get_month_abbrev( $wp_locale->get_month( $end_month ) );
             // Gets the event end day
             $end_day = get_post_meta( $post->ID, '_end_day', true );
             // Gets the event end year
@@ -32,14 +28,10 @@
             // Gets the even location
             $location = get_post_meta( $post->ID, '_event_location', true );
             ?>
-            <p><strong>Date:</strong>&nbsp;<?php echo $start_month . '/' . $start_day . '/' . $start_year; ?> to <?php echo $end_month . '/' . $end_day . '/' . $end_year; ?><br>
-            <strong>Location:</strong>&nbsp;<?php echo $location;?></p>
-            
-            
+            <p><strong>Date:</strong>&nbsp;<?php echo $start_month . '/' . $start_day . '/' . $start_year; ?> to <?php echo $end_month . '/' . $end_day . '/' . $end_year; ?><br><strong>Location:</strong>&nbsp;<?php echo $location;?></p>
             <a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-            
-            <?php the_excerpt(); ?>
-            <p class="full-story"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>">Full Story &raquo;</a></p>
+            <p><?php echo get_the_excerpt(); ?>&nbsp;<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><em>Full Story &raquo;</em></a></p>
+
         </article>
     <?php endwhile; ?>
     <?php endif; ?>

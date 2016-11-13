@@ -72,7 +72,7 @@ h1, h2, h3, h4 {
 	margin: 0 auto;
 	padding: 20px;
 	overflow: hidden;
-	border: 1px solid magenta; /* I should have made a comment here */
+	border: 1px solid #000;
 	} 
 
 	#logo {

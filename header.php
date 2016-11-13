@@ -6,7 +6,7 @@
 
 <!-- Begin Meta -->
 <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
-<meta name="description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />
+<meta name="description" content="<?php echo get_the_excerpt(); ?>" />
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
 <!-- End Meta -->
 
