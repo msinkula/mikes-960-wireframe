@@ -68,7 +68,6 @@ function add_flexslider() {
 		
         	echo $theImage;
 			echo '<blockquote class="home">&ldquo;'.$theBlockquote.'&rdquo;</blockquote>';
-			echo '<a href="'.$theLink.'"><button class="home">Learn More&nbsp;&raquo;</button></a>';
       
         echo '</li>';
         

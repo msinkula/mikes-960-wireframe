@@ -13,7 +13,7 @@
 <?php endif; ?>
 
 <!-- Begin Page Excerpt -->
-<?php $page_excerpts = array('post_type' => 'page','numberposts' => -1,'post_status' => null,'post_parent' => $post->ID,'order' => ASC,'orderby' => 'menu_order'); $child_pages = get_posts($page_excerpts); ?>
+<?php $page_excerpts = array('post_type' => 'page','numberposts' => -1,'post_status' => null,'post_parent' => $post->ID,'order' => 'ASC','orderby' => 'menu_order'); $child_pages = get_posts($page_excerpts); ?>
 <?php foreach ($child_pages as $post) : setup_postdata($post); ?>
     <article class="page-excerpt" id="page-excerpt-<?php the_ID(); ?>">
     <h2><a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title(); ?></a></h2>

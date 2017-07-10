@@ -23,9 +23,11 @@
     $location = get_post_meta( $post->ID, '_event_location', true );
     ?>
     <p><strong>Date:</strong>&nbsp;<?php echo $start_month . '/' . $start_day . '/' . $start_year; ?> to <?php echo $end_month . '/' . $end_day . '/' . $end_year; ?><br><strong>Location:</strong>&nbsp;<?php echo $location; ?></p>
-    <?php the_post_thumbnail('large'); ?>
+    <?php /* the_post_thumbnail('large'); */ ?>
+    <p>Flexslider?</p>
+    <?php add_flexslider(); ?>
     <?php the_content(''); ?> 
-    <small>single-event.php</small>
+    <small>single-event.php (is this on)</small>
 </article>
 <?php endwhile; ?>
 <?php endif; ?>
